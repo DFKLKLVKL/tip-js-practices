@@ -1,27 +1,16 @@
 "use strict";
 
-const totalTasks = 12;
-const completedTasks = 5;
+const totalTasks = 20;
+const completedTasks = 11;
 
 if (typeof totalTasks !== "number" || typeof completedTasks !== "number") {
-  console.log("Ошибка: количество задач должно быть числом.");
-}
-else if (!Number.isInteger(totalTasks) || !Number.isInteger(completedTasks)) {
-  console.log("Ошибка: количество задач должно быть целым числом.");
-}
-else if (!Number.isFinite(totalTasks) || !Number.isFinite(completedTasks)) {
-  console.log("Ошибка: недопустимое числовое значение.");
-}
-else if (totalTasks < 0 || totalTasks > 1000) {
-  console.log("Ошибка: totalTasks вне диапазона 0…1000.");
-}
-else if (completedTasks < 0 || completedTasks > totalTasks) {
-  console.log("Ошибка: выполнено больше, чем существует, или отрицательное значение.");
-}
-else if (totalTasks === 0 && completedTasks === 0) {
+} else if (!Number.isInteger(totalTasks) || !Number.isInteger(completedTasks)) {
+} else if (!Number.isFinite(totalTasks) || !Number.isFinite(completedTasks)) {
+} else if (totalTasks < 0 || totalTasks > 1000) {
+} else if (completedTasks < 0 || completedTasks > totalTasks) {
+} else if (totalTasks === 0 && completedTasks === 0) {
   console.log("Задач пока нет");
-}
-else {
+} else {
   const remaining = totalTasks - completedTasks;
   const percentage = completedTasks / totalTasks * 100;
 
